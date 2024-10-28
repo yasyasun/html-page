@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Web-site | Yana Saveleva </title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @font-face {
+        font-family: "Open Sans";
+        src: url("fonts/OpenSans-Regular.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+    <link rel="icon" type="image/png" href="image/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
+    <link rel="shortcut icon" href="image/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png" />
+    <link rel="manifest" href="image/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <!-- Шапка сайта -->
+    <header class="header">
+      <div class="header__container">
+        <h1 class="header__title">Веб-разработчик Яна Савельева</h1>
+        <h2 class="header__subtitle">Создание современных веб-приложений</h2>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Обо мне</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Навыки</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Портфолио</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Секция "Обо мне" -->
+    <section class="about">
+      <div class="about__container">
+        <h2 class="about__title">Обо мне</h2>
+        <!-- Добавляем изображение -->
+        <figure class="about__image">
+          <img src="image/profile.jpg" alt="Фото Мизёва Игоря" />
+        </figure>
+        <p class="about__text">
+          Я начинающий веб-разработчик. 
+        </p>
+        <p class="about__text">Специализируюсь на
+          создании современных и удобных веб-приложений.
+        </p>
+        <p class="about__text">
+          Мои основные ценности:
+          &lt;качество&gt;, &lt;скорость&gt;, &lt;удобство&gt;.
+        </p>
+        <blockquote class="about__quote">
+          "Простота — ключ к надёжности." &mdash; Э. Дейкстра
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Секция "Навыки" -->
+    <section class="skills">
+      <div class="skills__container">
+        <h2 class="skills__title">Навыки</h2>
+        <ul class="skills__list">
+          <li class="skills__item">HTML & CSS</li>
+          <li class="skills__item">JavaScript</li>
+          <li class="skills__item">Git & GitHub</li>
+        </ul>
+        <h3 class="skills__subtitle">Другие навыки:</h3>
+        <ul class="skills__extra">
+          <li class="skills__extra-item">Python</li>
+          <li class="skills__extra-item">SQL</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Секция "Портфолио" -->
+    <section class="portfolio">
+      <div class="portfolio__container">
+        <h2 class="portfolio__title">Портфолио</h2>
+        <div class="portfolio__projects">
+          <!-- Проект 1 -->
+          <div class="portfolio__project">
+            <h3 class="portfolio__project-title">Сайт-портфолио</h3>
+            <p class="portfolio__project-description">
+              Используемые технологии: HTML, CSS, JavaScript.
+            </p>
+          </div>
+          <!-- Проект 2 -->
+          <div class="portfolio__project">
+            <h3 class="portfolio__project-title">Телегам-бот</h3>
+            <p class="portfolio__project-description">
+              Используемые технологии: Python, Peewee, API.
+            </p>
+          </div>
+          <!-- Проект 3 -->
+          <div class="portfolio__project">
+            <h3 class="portfolio__project-title">Интернет-магазин</h3>
+            <p class="portfolio__project-description">
+              Используемые технологии: Python, Django, DRF, SQLite, API.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <footer class="footer">
+      <div class="footer__container">
+        <h2 class="footer__title">Контакты</h2>
+        <address class="footer__contact">
+          <p class="footer__contact-item">
+            Email: <a href="mailto:yana_sun_@mail.ru">yana_sun_@mail.ru</a>
+          </p>
+          <p class="footer__contact-item">
+            Телефон: <a href="tel:+79045980001">+7 (904) 598-00-01</a>
+          </p>
+          <p class="footer__contact-item">
+            &copy; 2024 Yana Saveleve
+          </p>
+          <!-- Спецсимвол -->
+        </address>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,274 @@
+/* Сброс отступов и стандартных стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", "Open Sans", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* Стили для header */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  z-index: 10; /* z-index для обеспечения отображения поверх других элементов */
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__title {
+  font-size: 2em;
+  margin-bottom: 10px;
+  /* text-transform: uppercase; */
+}
+
+.header__subtitle {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  /* font-style: italic; */
+}
+
+.header__nav {
+  z-index: 20; /* z-index для навигации */
+}
+
+.header__menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Flexbox: поддержка нескольких строк */
+}
+
+.header__menu-item {
+  margin: 0 15px;
+}
+
+.header__menu-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+/* Псевдоэлемент для underline эффекта */
+.header__menu-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.header__menu-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Стили для about */
+.about__container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__title {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.about__image {
+  max-width: 200px;
+  margin: 20px auto;
+  text-align: center;
+  position: relative;
+}
+
+.about__image img {
+  max-width: 100%;
+  border-radius: 50%;
+  border: 5px solid #4caf50;
+}
+
+.about__caption {
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 10px;
+}
+
+.about__text {
+  margin-top: 20px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.about__quote {
+  margin-top: 20px;
+  font-style: italic;
+  background-color: #eee;
+  padding: 10px;
+  border-left: 5px solid #4caf50;
+  text-align: center;
+}
+
+/* Стили для skills */
+.skills__container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills__title,
+.skills__subtitle {
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.skills__list,
+.skills__extra {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.skills__item,
+.skills__extra-item {
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Псевдоэлемент before для списка навыков */
+.skills__item::before,
+.skills__extra-item::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #4caf50;
+}
+
+/* Стили для portfolio */
+.portfolio__container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio__title {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.portfolio__projects {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.portfolio__project {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 20px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio__project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio__project-title {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.portfolio__project-description {
+  font-size: 1em;
+}
+
+/* Стили для footer */
+.footer {
+  margin-top: 50px;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer__title {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+.footer__contact-item a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.footer__contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .header__title {
+    font-size: 1.6em;
+  }
+
+  .header__subtitle {
+    font-size: 1em;
+  }
+
+  .header__menu-item {
+    margin: 0 10px;
+  }
+
+  .portfolio__project {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio__project {
+    width: 100%;
+  }
+
+  .header__menu {
+    flex-direction: column;
+  }
+
+  .header__menu-item {
+    margin-bottom: 10px;
+  }
+
+  .about__image {
+    max-width: 150px;
+  }
+}
